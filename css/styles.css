@@ -1,0 +1,29 @@
+body {
+  background-color: #34f6f2;
+  font-family: "Rock Salt", cursive;
+}
+
+body > .grid {
+  height: 100%;
+}
+
+.image {
+  margin-top: -100px;
+}
+
+.column {
+  max-width: 450px;
+}
+
+#img {
+  width: 15em;
+}
+
+#header-title {
+  color: #eef8ff;
+  font-family: "Rock Salt", cursive;
+}
+
+#btn {
+  font-family: "Rock Salt", cursive;
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tailor</title>
+
+    <!-- Icon -->
+    <link rel="icon" href="images/icon.png" />
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Rock+Salt&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Semantic UI -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.5.0/semantic.min.css"
+    />
+    <!-- CSS Stylesheets -->
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <body data-new-gr-c-s-check-loaded="14.1126.0" data-gr-ext-installed>
+      <div class="ui middle aligned center aligned grid content">
+        <div class="column">
+          <!-- CHANGE -->
+          <img id="img" src="images/icon.png" class="image" />
+          <h2 class="ui image header">
+            <div id="header-title" class="content">Log-in to your account</div>
+          </h2>
+          <form class="ui large form">
+            <div class="ui stacked segment">
+              <!-- CHANGE -->
+              <div class="field">
+                <div class="ui left icon input">
+                  <i class="user icon"></i>
+                  <input
+                    type="text"
+                    name="email"
+                    placeholder="E-mail address"
+                  />
+                </div>
+              </div>
+              <!-- CHANGE -->
+              <div class="field">
+                <div class="ui left icon input">
+                  <i class="lock icon"></i>
+                  <input
+                    type="password"
+                    name="password"
+                    placeholder="Password"
+                  />
+                </div>
+              </div>
+              <div id="btn" class="ui fluid large teal submit button">
+                Login
+              </div>
+            </div>
+
+            <div class="ui error message"></div>
+          </form>
+          <!-- CHANGE HREF -->
+          <div class="ui message">New to us? <a href="#">Sign Up</a></div>
+        </div>
+      </div>
+    </body>
+
+    <!-- Semantic UI Script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.5.0/semantic.min.js"></script>
+  </body>
+</html>
