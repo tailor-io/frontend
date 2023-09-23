@@ -1,0 +1,10 @@
+body {
+  background-color: #34f6f2;
+  font-family: "Rock Salt", cursive;
+  height: 100%;
+}
+
+.right {
+  width: 100%;
+  height: 500px;
+}
