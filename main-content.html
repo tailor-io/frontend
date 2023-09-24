@@ -19,6 +19,30 @@
     />
     <!-- CSS Stylesheets -->
     <link rel="stylesheet" href="css/contents.css" />
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(function () {
+          $("#picker1").datepicker({});
+        });
+
+        $(function () {
+          $("#picker2").datepicker({});
+        });
+
+        $("#picker1").change(function () {
+          startDate = $(this).datepicker("getDate");
+          $("#picker2").datepicker("option", "minDate", startDate);
+        });
+
+        $("#picker2").change(function () {
+          endDate = $(this).datepicker("getDate");
+          $("#picker1").datepicker("option", "maxDate", endDate);
+        });
+      });
+    </script>
   </head>
   <body>
     <h1 class="title">Input your information below:</h1>
@@ -41,19 +65,89 @@
           </div>
         </div>
       </div>
+      <!-- Personal Info -->
       <div class="tabs__content" data-tab="1">
         <h2 class="sub-header">Personal Info</h2>
-        <div class="ui form">
+
+        <form class="ui form">
           <div class="field">
-            <textarea id="text"></textarea>
+            <label>First Name</label>
+            <input type="text" name="first-name" placeholder="First Name" />
           </div>
-        </div>
+          <div class="field">
+            <label>Last Name</label>
+            <input type="text" name="last-name" placeholder="Last Name" />
+          </div>
+          <div class="field">
+            <label>City</label>
+            <input type="text" name="city" placeholder="City" />
+          </div>
+          <div class="field">
+            <label>State</label>
+            <input type="text" name="state" placeholder="State" />
+          </div>
+          <div class="field">
+            <label>Phone</label>
+            <input type="text" name="phone" placeholder="Phone #" />
+          </div>
+          <button class="ui blue button" type="submit">
+            Save Personal Info
+            <!-- <a href="#" style="color: white">Save Personal Info</a> -->
+          </button>
+        </form>
       </div>
+      <!-- Work Experience -->
       <div class="tabs__content" data-tab="2">
         <h2 class="sub-header">Work Experiences</h2>
         <div class="ui form">
           <div class="field">
-            <textarea></textarea>
+            <!-- Title -->
+            <label>Title</label>
+            <div class="ui fluid icon input">
+              <input type="text" name="title" placeholder="Job Title" />
+            </div>
+            <div class="two fields">
+              <div class="field">
+                <label>Start date</label>
+                <div class="ui calendar" id="rangestart">
+                  <div class="ui input left icon">
+                    <i class="calendar icon"></i>
+                    <input
+                      id="picker1"
+                      type="text"
+                      placeholder="Start"
+                      style="font-family: Arial, Helvetica, sans-serif"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="field">
+                <label>End date</label>
+                <div class="ui calendar" id="rangeend">
+                  <div class="ui input left icon">
+                    <i class="calendar icon"></i>
+                    <input
+                      id="picker2"
+                      type="text"
+                      placeholder="End"
+                      style="font-family: Arial, Helvetica, sans-serif"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="field">
+              <div class="field">
+                <label>Description</label>
+                <textarea
+                  id="freeform"
+                  name="freeform"
+                  rows="10"
+                  cols="50"
+                ></textarea>
+              </div>
+            </div>
           </div>
         </div>
       </div>

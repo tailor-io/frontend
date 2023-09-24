@@ -44,7 +44,7 @@ body {
 
 .tabs__button--active {
   font-weight: bold;
-  border-right: 2px solid #34f6f2;
+  border-right: 4px solid yellow;
   background: #b4b2b2;
 }
 
